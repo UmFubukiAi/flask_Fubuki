@@ -22,5 +22,9 @@ def terceiro():
 def quarto():
     return render_template('./quarto.html')
 
+@app.route('foto')
+def foto():
+    return render_template('./foto.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
