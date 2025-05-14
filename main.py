@@ -22,7 +22,7 @@ def terceiro():
 def quarto():
     return render_template('./quarto.html')
 
-@app.route('foto')
+@app.route('/foto')
 def foto():
     return render_template('./foto.html')
 
