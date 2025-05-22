@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="{{url_for('recebedados')}}" method="post">
+        <label>Nome:</label>
+        <input type="text" name="nome"><br>
+        <label>Email:</label>
+        <input type='text' name="email"><br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <select name='estado'>
+        <option value='RN'>Rio Grande Do Norte</option>
+        <option value='PB'>Paraíba</option>
+        <option value='PE'>Pernanmbuco</option>
+        <option value='CE'>Ceará</option>
+    </select>
+    <br>
+    <p>Qual sua formação?</p>
+    <input type="radio" name="formacao" value="fundamental">Ensino Fundamental<br>
+    <input type="radio" name="formacao" value="medio">Ensino Médio<br>
+    <input type="radio" name="formacao" value="superior">Ensino Superior<br>
+</body>
+</html>

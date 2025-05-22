@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -25,6 +25,18 @@ def quarto():
 @app.route('/foto')
 def foto():
     return render_template('./foto.html')
+
+@app.route('/forms')
+def forms():
+    return render_template('./forms.html')
+
+@app.route('/recebedados', methods=['POST'])
+def recebedados():
+    nome=request.form['nome']
+    email=request.form['email']
+    estado=request.form['estado']
+    formacao=request.form['formacao']
+    return "{} - {}".format(nome, email)
 
 if __name__ == '__main__':
     app.run(debug=True)
