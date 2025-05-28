@@ -36,7 +36,7 @@ def recebedados():
     email=request.form['email']
     estado=request.form['estado']
     formacao=request.form['formacao']
-    return "{} - {}".format(nome, email)
+    return "{} - {} - {} - {}".format(nome, email, estado, formacao)
 
 if __name__ == '__main__':
     app.run(debug=True)
