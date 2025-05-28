@@ -30,6 +30,10 @@ def foto():
 def forms():
     return render_template('./forms.html')
 
+@app.route('/teste')
+def teste():
+    return render_template('./teste.html')
+
 @app.route('/recebedados', methods=['POST'])
 def recebedados():
     nome=request.form['nome']
